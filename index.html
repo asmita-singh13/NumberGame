@@ -1,44 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Number Guessing Game</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #28a7a1;
-        }
-        .container {
-            text-align: center;
-            padding: 20px;
-            border: 1px solid #1c12de;
-            background-color: #bf8de5;
-            box-shadow: 0 0 10px rgba(90, 69, 108, 0.1);
-        }
-        a {
-            text-decoration: none;
-            color: #fff;
-            background-color: #1c12de;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-        a:hover {
-            background-color: #0a086b;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guessing Game</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to the Number Guessing Game!</h1>
-        <p>Click the button below to start playing.</p>
-        <a href="game.html">Start Game</a>
+  <div class="container">
+    <h1>Number Guessing Game</h1>
+    <p id="instructions">I have a number between 1 and 100. Can you guess my number?</p>
+    <div class="input-group">
+      <input type="number" id="guess" placeholder="Enter your guess" min="1" max="100">
+      <button id="submit">Submit</button>
     </div>
+    <p id="feedback"></p>
+    <button id="restart" class="hidden">Play Again</button>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
-
